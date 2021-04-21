@@ -8,28 +8,4 @@
     <name>test2</name>
     <strike>1</strike>
   </task>
-  <task>
-    <name>OneDrive Standalone Update Task-S-1-5-18</name>
-    <strike>1</strike>
-  </task>
-  <task>
-    <name>OneDrive Standalone Update Task-S-1-5-21-1468878567-1558322448-3049851694-1002</name>
-    <strike>1</strike>
-  </task>
-  <task>
-    <name>OneDrive Standalone Update Task-S-1-5-21-3641078771-3653456904-245653651-2055525</name>
-    <strike>1</strike>
-  </task>
-  <task>
-    <name>UDI_cleanup</name>
-    <strike>1</strike>
-  </task>
-  <task>
-    <name>UDI_Regcleanup</name>
-    <strike>1</strike>
-  </task>
-  <task>
-    <name>UDI_RegRestoreMousecleanup</name>
-    <strike>1</strike>
-  </task>
 </tasks>
