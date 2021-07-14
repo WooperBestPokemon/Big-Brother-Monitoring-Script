@@ -1,16 +1,19 @@
 <#
-This is a task monitor script. It checks if any task has trouble and report them to an email address.
-Last Update: 04/21/2021
+This is a task monitor script. It checks if any task has trouble and report them to the mailbox.
+
+This version will wait until the second try before alerting since some script fail, but fix themself afterward. It will prevent useless alert.
+
+Last Update: 07/14/2021
 #>
-Using module "PathToScript\modules\LogInfo.psm1"
-Using module "PathToScript\modules\Mail.psm1"
-Using module "PathToScript\modules\Check.psm1"
+Using module ".\modules\LogInfo.psm1"
+Using module ".\modules\Mail.psm1"
+Using module ".\modules\Check.psm1"
 
 $log = New-Object log
 $mail = New-Object mail
 $check = New-Object check
 
-$path = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Definition) #<-- The path of the script
+$path = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Definition) #<-- The path of the script. I know... it's disgusting...
 
 #Variables
 [System.Collections.ArrayList]$problem = @() #<-- This is a task array

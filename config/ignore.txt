@@ -1,2 +1,2 @@
-exemple 1
-exemple 2
+Every line is a script
+to ignore

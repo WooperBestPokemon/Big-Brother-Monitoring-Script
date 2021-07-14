@@ -2,10 +2,6 @@
 <tasks>
   <task>
     <name>test1</name>
-    <strike>3</strike>
-  </task>
-  <task>
-    <name>test2</name>
-    <strike>1</strike>
+    <strike>2</strike>
   </task>
 </tasks>

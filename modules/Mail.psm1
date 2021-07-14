@@ -1,6 +1,3 @@
-<#
-    This class will be used to send a mail, containing all the tasks that are having an issue
-#>
 class mail{
     [void]SendMail($tasks)
     {
@@ -40,7 +37,7 @@ class mail{
 
 				$dataProblems.Add($newColumn)
 			}        
-            #The HTML of the message, feel free to modify it as much as you want
+
 			$html = "
 			<style>
 				table{
@@ -59,7 +56,7 @@ class mail{
 					background-color: DarkOrange;
 				}
 			</style>
-			<h4>There are $nbProblems task(s) that are currently having an issue.</h4>
+			<h4>Hello ! There are $nbProblems task(s) that are currently having an issue.</h4>
 			<table>
 				<tr>
 					<th>Name</th>
@@ -72,13 +69,14 @@ class mail{
 
 			$html += "</table>"
 
-			$From = ""
-			$To = ""    
+			$From = "Email@Something.com"
+			$To = "Email@Something.com"    
 			$messageSubject = "Task monitoring: Problem found !  $(get-date)"
 			$message = New-Object System.Net.Mail.MailMessage $From, $To
 			$message.Subject = $messageSubject
 			$message.IsBodyHTML = $true
 			$message.Body = $html
+			$message.To.Add("Email@Something.com")   
 		 
 			$SMTPServer = "mailhost"
 			$smtp = New-Object Net.Mail.SmtpClient($SMTPServer)

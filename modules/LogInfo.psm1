@@ -1,6 +1,3 @@
-<#
-    A simple class to log stuff
-#>
 class log
 {
     [void]Alert($task, $path)
